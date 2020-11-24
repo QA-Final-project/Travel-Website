@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <title>Landing page</title>
+
+    <style>
+        h3{
+            font-weight: lighter;
+        }
+        h5{
+            color: #FCAB10;
+        }
+        .row{
+            margin-top: 24px;
+        }
+        button{
+            margin-top: 24px;
+        }
+
+        .btn{
+            color: #000;
+            background-color: #FCAB10;
+            border: none
+        }
+        .explore-btn{
+            color: #FCAB10;
+            background-color: #fff;
+            border: 2px solid #FCAB10;
+        }
+
+
+
+        a{
+            color: #006AA4;
+        }
+
+        /*  ************ MAIN CONTENT STYLE ************* */
+
+        /* style for tour container */
+        .tour-container{
+            background-color:#f8f9fa!important ;
+
+        }
+        .card{
+            border-radius: 10px;
+        }
+
+        .fa-heart{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 5;
+            color: red;
+        }
+
+        /* style for story container */
+        .news{
+            display: flex;
+            flex-direction: row;  
+        }
+
+        .item{
+            /* width: 20rem; */
+            padding: 24px ;
+            font-size: 2rem;
+            line-height: 1;
+            text-align: center;  
+            margin: 8px;
+        }
+
+        .item-1{
+            flex-basis: 45%;
+        }
+
+        .item-2{
+            flex-basis: 55%;
+            text-align: left;
+        }
+
+        .item-2 h5{
+            color: #3D3D3D;
+            font-weight: lighter;
+
+        }
+        .item-2 p{
+            font-size: 16px;
+            line-height: 145%;
+            padding-right: 36px;
+        }
+
+        /* style for promotion container */
+        .text-overlay{
+            z-index: 5;
+            text-align: center;
+        }
+
+        /* ************ FOOTER STYLE ************* */
+        #sticky-footer {
+            flex-shrink: none;
+            background-image: url('../img/footer-lg.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .fa-facebook{
+            margin: 0 8px;
+        }
+        .fa-instagram{
+            margin: 0 8px;
+        }
+        .fa-twitter-square{
+            margin: 0 8px;
+
+        }
+        #contact{
+            background:#f8f9fa!important;
+            padding:24px;
+            border-radius: 10px;
+        }
+        .contact-form{
+            margin-top: 8px;
+        }
+        .submit-btn{
+            color: #FCAB10;
+            background-color: #fff;
+            border: 2px solid #FCAB10;
+        }
+
+
+        /*media queries*/
+        @media only screen and (min-width: 1200px){
+            .jumbotron{
+                background-image:url('../img/lg.jpg');
+                min-height: 500px;
+                background-repeat: no-repeat;
+            }
+            .fa-heart{
+                font-size: 1.9em;
+            }
+            .item-1 img{
+                max-width: 100%;
+            }
+
+            .sale-bg{
+                background-image: url('../img/sale-lg.jpg');
+                min-height: 500px;
+            }
+            .text-overlay{
+                padding:200px ;
+            }
+        
+            
+        }
+            
+        @media only screen and (max-width: 1199px) and (min-width: 992px){
+            .jumbotron{
+                background-image:url("../img/md.jpg");
+                min-height: 400px;
+                background-repeat: no-repeat;
+            } 
+            .fa-heart{
+                font-size: 1.65em;
+            }
+            .item-1 img{
+                max-width: 100%;
+            }
+            .sale-bg{
+                background-image: url('../img/sale-md.jpg');
+                min-height: 400px;
+            }
+            .text-overlay{
+                padding:80px ;
+            }
+        
+        }
+            
+        @media only screen and (max-width: 991px) and (min-width: 576px){
+            .jumbotron{
+                background-image:url("../img/sm.jpg");
+                min-height: 300px;
+                background-repeat: no-repeat;
+            }
+            label{
+                font-size: 14px;
+            }
+            input::placeholder{
+                font-size: 14px;
+            }
+            .fa-heart{
+                font-size: 1.33em;
+            }
+
+            .item-1 img{
+                max-width: 100%;
+            }
+            .sale-bg{
+                background-image: url('../img/sale-sm.jpg');
+                min-height: 300px;
+            }
+
+            .text-overlay{
+                padding:48px ;
+            }            
+        }
+            
+        @media only screen and (max-width: 575px){
+            .jumbotron{
+                background-image:url("../img/xs.jpg");
+                min-height: 200px;
+                background-repeat: no-repeat;
+            }
+
+            label{
+                font-size: 13px;
+            }
+            input::placeholder{
+                font-size: 12px;
+            }
+
+            #nav-tab{
+                font-size: 13px;
+            }
+            .custom-select{
+                font-size: 12px;
+            }
+            .fa-heart{
+                font-size: 1.20em;
+            }
+            .news{
+                flex-direction: column;
+            }
+            
+            .item-1 img{
+                max-width: 100%;
+            }
+            .sale-bg{
+                background-image: url('../img/sale-xs.jpg');
+                min-height: 200px;
+            }
+            .text-overlay{
+                padding:5px ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/100x50?text=Logo" alt="">
+            </a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div class="search-icon">
+                <i class="fas fa-search fa-lg"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- *************** MAIN CONTENT ************** -->
+
+    <!-- TOUR CONTAINER -->
+    <div class="tour-container p-4">
+        <h3>Pack and Go</h3>
+        <h2>AWESOME TOURS</h2>
+        <br>
+        <div class="card-deck ">
+            <div class="card">
+                <div class="img-thumb">
+                    <img class="card-img-top" src="img/paris.jpg" alt="Card image cap">
+                    
+                </div>
+              <div class="card-body">
+                <h4 class="card-title">Paris, France </h4>
+                <h5> CA$ 899.00 <span style="font-size: 14px; color: #3D3D3D;">&nbsp 3days 2 nights</span></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href="#" class="btn btn-primary">Book now</a>
+ 
+              </div>
+            </div>
+            <div class="card">
+              <div class="img-thumb">
+                <img class="card-img-top" src="img/tokyo.jpg" alt="Card image cap">
+               
+            </div>
+              <div class="card-body">
+                <h4 class="card-title">Kyoto, Japan</h4>
+                <h5> CA$ 999.00 <span style="font-size: 14px; color: #3D3D3D;">&nbsp 3days 2 nights</span></h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Book now</a>
+                
+              </div>
+            </div>
+            <div class="card">
+                <div class="img-thumb">
+                    <img class="card-img-top" src="img/london.jpg" alt="Card image cap">
+                    
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">London, England</h4>
+                    <h5> CA$ 699.00 <span style="font-size: 14px; color: #3D3D3D;">&nbsp 3days 2 nights</span></h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary explore-btn" >Explore More</button>
+          </div>
+    </div>
+
+    <!-- STORY CONTAINER -->
+    <div class="story-container p-4">
+        <h3>Explorational Stories</h3>
+        <h2>NEWS & UPDATES</h2>
+        <div class="news">
+            <div class="item item-1"><img src="img/story.jpg" alt=""></div>
+            <div class="item item-2">
+                <h4>Kayaking 101: Tips and Tricks for Beginners</h4>
+                <h5>Nov 17th, 2020  |  Admin</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta. Congue mauris rhoncus aenean vel elit scelerisque mauris.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROMOTION CONTAINER -->
+    <div class="sale-container">
+        <div class=" sale-bg">
+            <div class="text-overlay">
+                <h1>DISCOVER THE WORLD</h1>
+                <h3>SALE OFF<span style="color:#336699; font-weight: normal;"> 50%</span> Asia Tours </h3>
+                <div class=" text-center">
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- **************** FOOTER ***************** -->
+     <footer id="sticky-footer" class="p-4">
+        <div class="container text-center">
+            <div class="d-flex justify-content-center mt-4">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+            <small>Copyright &copy; BCIT TRAVEL 2020</small>
+        </div>
+    </footer>
+
+    <!-- ************** SCRIPTS **************** -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
