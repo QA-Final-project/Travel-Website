@@ -278,7 +278,156 @@
             </div>
         </div>
     </nav>
+    
+    <!-- ************ HEADER ************ -->
+    <header>
+        <!-- jumbotron image -->
+        <div class="jumbotron"></div>
+            
+        <!-- ******** search and find dates tabs ******* -->
+        <div class="middle-container p-4 ">
+            <div id="nav-tab" class="nav nav-tabs" role="tablist">
+                <a class="nav-item nav-link active" id="nav-flight-tab" data-toggle="tab" href="#flight-tab" role="tab" aria-controls="flight-tab" aria-selected="true"><i class="fa fa-plane w3-margin-right"></i> Flight</a>
+                <a class="nav-item nav-link" id="nav-hotel-tab" data-toggle="tab" href="#hotel-tab" role="tab" aria-controls="hotel-tab" aria-selected="false"><i class="fa fa-bed w3-margin-right"></i> Hotel</a>
+                <a class="nav-item nav-link" id="nav-rental-tab" data-toggle="tab" href="#rental-tab" role="tab" aria-controls="rental-tab" aria-selected="false"><i class="fa fa-car w3-margin-right"> </i> Rental</a>
+            </div>
 
+            <div class="tab-content" id="nav-tabContent">
+                <!-- flight tab starts here -->
+                <div id="flight-tab" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-flight-tab">
+                    <form>
+                        <div class="row">
+                        <div class="col-6">
+                            <label for="">From</label>
+                            <input type="text" class="form-control" placeholder="Departing from">
+                        </div>
+                        <div class="col-6">
+                            <label for="">To</label>
+                            <input type="text" class="form-control" placeholder="Arriving at">
+                        </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">Check-in</label>
+                                <input type="date" class="form-control" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div class="col-4">
+                                <label for="">Check-out</label>
+                                <input type="date" class="form-control" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div class="col-2">
+                                <label for="">Adult(s)</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <label for="">Child</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>                              
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-primary">Search Flight</button>
+                </div>
+                <!-- close flight tab -->
+
+                <!-- hotel tab starts here -->
+                <div id="hotel-tab" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-hotel-tab">
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Destination name</label>
+                            <input type="text" class="form-control" placeholder="City, place to go">
+                        </div>
+                        <div class="col">
+                            <label for="">Hotel name</label>
+                            <input type="text" class="form-control" placeholder="Hotel to go">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="">Check-in</label>
+                            <input type="date" class="form-control" placeholder="mm/dd/yyyy">
+                        </div>
+                        <div class="col-4">
+                            <label for="">Check-out</label>
+                            <input type="date" class="form-control" placeholder="mm/dd/yyyy">
+                        </div>
+                        <div class="col-2">
+                            <label for="">Adult(s)</label>
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>  
+                        <div class="col-2">
+                            <label for="">Adult(s)</label>
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <button type="button" class="btn btn-primary">Search Hotels</button>
+                </div>
+                <!-- close hotel tab -->
+
+
+                <!-- rental tab starts here -->
+                <div id="rental-tab" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-rental-tab">
+                    <form>
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">Driver?</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>Without driver</option>
+                                    <option value="1">With driver</option>
+                                </select>
+                            </div>
+                            <div class="col-8">
+                                <label for="">Your rental location</label>
+                                <input type="text" class="form-control" placeholder="Enter city or region">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">Start date</label>
+                                <input type="date" class="form-control" placeholder="mm//dd/yyyy">
+                            </div>
+                            <div class="col-2">
+                                <label for="">Start </label>
+                                <input type="time" class="form-control" placeholder="10:00">
+                            </div>
+                            <div class="col-4">
+                                <label for="">End date</label>
+                                <input type="date" class="form-control" placeholder="mm//dd/yyyy">
+                            </div>
+                            <div class="col-2">
+                                <label for="">End</label>
+                                <input type="time" class="form-control" placeholder="10:00">
+                            </div>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-primary">Search Car</button>
+                </div>
+                <!-- close retal tab -->
+            </div>
+        </div> <!-- end middle-box -->
+    </header>
     <!-- *************** MAIN CONTENT ************** -->
 
     <!-- TOUR CONTAINER -->
