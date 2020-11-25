@@ -102,7 +102,7 @@ a{
 
 /* style for promotion container */
 .text-overlay{
-    z-index: 5;
+    z-index: 1;
     text-align: center;
 }
 
@@ -111,6 +111,8 @@ a{
     flex-shrink: none;
     background-image: url('../img/footer-lg.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .fa-facebook{
@@ -144,6 +146,7 @@ a{
         background-image:url('../img/lg.jpg');
         min-height: 500px;
         background-repeat: no-repeat;
+        background-size: cover;
     }
     .fa-heart{
         font-size: 1.9em;
@@ -155,12 +158,19 @@ a{
     .sale-bg{
         background-image: url('../img/sale-lg.jpg');
         min-height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .text-overlay{
-        padding:200px ;
+        padding: 190px ;
+    }
+    .text-overlay h3{
+        margin-top: 40px;
+    }
+    .detail-btn{
+        margin-top: 40px ;
     }
 
-    
 }
     
 @media only screen and (max-width: 1199px) and (min-width: 992px){
@@ -168,6 +178,7 @@ a{
         background-image:url("../img/md.jpg");
         min-height: 400px;
         background-repeat: no-repeat;
+        background-size: cover;
     } 
     .fa-heart{
         font-size: 1.65em;
@@ -178,13 +189,18 @@ a{
     .sale-bg{
         background-image: url('../img/sale-md.jpg');
         min-height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .text-overlay{
-        padding:80px ;
+        padding:110px ;
     }
     .text-overlay h3{
-        margin-top: 28px ;
-    }   
+        margin-top: 32px ;
+    }
+    .detail-btn{
+        margin-top: 32px;
+    }
 
 }
     
@@ -193,6 +209,7 @@ a{
         background-image:url("../img/sm.jpg");
         min-height: 300px;
         background-repeat: no-repeat;
+        background-size: cover;
     }
     label{
         font-size: 14px;
@@ -210,14 +227,20 @@ a{
     .sale-bg{
         background-image: url('../img/sale-sm.jpg');
         min-height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .text-overlay{
-        padding:48px ;
+        padding:66px ;
     }
 
     .text-overlay h3{
         margin-top: 22px ;
+        font-size: 26px;
+    }
+    .detail-btn{
+        margin-top: 22px;
     }            
 }
     
@@ -226,6 +249,7 @@ a{
         background-image:url("../img/xs.jpg");
         min-height: 200px;
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     label{
@@ -254,15 +278,17 @@ a{
     .sale-bg{
         background-image: url('../img/sale-xs.jpg');
         min-height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .text-overlay{
-        padding:5px ;
+        padding:40px ;
     }
     .text-overlay h1{
-        font-size: 36px;
+        font-size: 32px;
     }
     .text-overlay h3{
-        font-size: 24px;
+        font-size: 22px;
         margin-top: 12px ;
     }
     .detail-btn{
