@@ -31,6 +31,9 @@ button{
     background-color: #fff;
     border: 2px solid #FCAB10;
 }
+.btn-lg{
+    text-align: center;
+}
 
 
 a{
@@ -297,3 +300,8 @@ a{
         margin-top: 12px ;
     }
 
+<<<<<<< Updated upstream
+}
+=======
+}
+>>>>>>> Stashed changes
