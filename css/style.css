@@ -103,6 +103,7 @@ a{
 /* style for promotion container */
 .text-overlay{
     z-index: 5;
+    z-index: 1;
     text-align: center;
 }
 
@@ -158,6 +159,7 @@ a{
     }
     .text-overlay{
         padding:200px ;
+        padding: 190px ;
     }
 
     
@@ -181,6 +183,7 @@ a{
     }
     .text-overlay{
         padding:80px ;
+        padding:110px ;
     }
 
 }
@@ -211,6 +214,7 @@ a{
 
     .text-overlay{
         padding:48px ;
+        padding:66px ;
     }            
 }
     
@@ -250,5 +254,6 @@ a{
     }
     .text-overlay{
         padding:5px ;
+        padding:40px ;
     }
 }
